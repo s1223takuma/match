@@ -1,0 +1,130 @@
+.header ul {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    /* background-color: black; */
+    border-bottom: solid 3px #000000;
+    height: 100px;
+}
+.header {
+    background: linear-gradient(
+            to right,
+            #e60000,
+            #f39800,
+            #fff100,
+            #009944,
+            #0068b7,
+            #1d2088,
+            #920783,
+            #e60000
+        )
+        0 / 200%;
+    animation: 10s header linear infinite;
+}
+@keyframes header {
+    100% {
+        background-position: 200%;
+    }
+}
+
+.header ul li {
+    list-style: none;
+    margin: 20px;
+}
+
+.header ul li a {
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    color: white;
+    text-decoration: none;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    -ms-transition: 0.8s;
+    transition: 0.8s;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.header ul li a:hover {
+    text-shadow: 0 0 20px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255);
+}
+
+.header h1 {
+    color: white;
+    text-shadow: 0 0 20px rgb(60, 0, 255), 0 0 20px rgb(218, 1, 251);
+    display: flex;
+    z-index: 10;
+
+}
+
+main {
+    padding-top: 100px;
+}
+.notfound {
+    font-size: 100px;
+    color: white;
+}
+.nopage {
+    background-color: black;
+    height: 890px;
+}
+
+.earth {
+    position: relative;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(
+            to right,
+            #e60000,
+            #f39800,
+            #fff100,
+            #009944,
+            #0068b7,
+            #1d2088,
+            #920783,
+            #e60000
+        )
+        0 / 200%;
+    animation: 1s header linear infinite;
+    border-radius: 50%;
+    box-shadow: -20px 0 3px rgba(0, 0, 0, 0.168) inset;
+    z-index: 8;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.earth:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-image: url(https://drive.google.com/uc?export=view&id=11chGBx0vAj79X4ph_fUXDQIYdRy9uqBV);
+    opacity: 0.6;
+    background-position: 0 0;
+    background-size: auto 100%;
+    transform: rotate(23.4deg);
+    animation: rotation 1s linear infinite;
+    z-index: 9;
+
+}
+
+@keyframes rotation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
