@@ -5,10 +5,11 @@ import Registration from "./pages/registration";
 import Notfound from "./pages/notfound";
 import { BrowserRouter,Route,Switch,NavLink } from 'react-router-dom';
 import "./css/style.css"
+import { AuthProvider } from './context/Authcontext';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter className="body">
       <header className="header">
       <div className="earth"></div>
           <h1 className="title">
@@ -21,6 +22,7 @@ function App() {
                 <li><NavLink activeClassName="active" to="/registration">会員登録</NavLink></li>
             </ul>
       </header>
+      <AuthProvider>
     <Switch>
         <Route exact path="/">
           <Main />
@@ -38,6 +40,7 @@ function App() {
           <Notfound />
         </Route>
     </Switch>
+    </AuthProvider>
     </BrowserRouter>
   );
 }

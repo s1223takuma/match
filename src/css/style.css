@@ -8,7 +8,6 @@
     position: fixed;
     width: 100%;
     z-index: 10;
-    /* background-color: black; */
     border-bottom: solid 3px #000000;
     height: 100px;
 }
@@ -36,6 +35,13 @@
 .header ul li {
     list-style: none;
     margin: 20px;
+    transition: 1s all;
+}
+
+
+.header ul{
+    transition: 1s all;
+    animation: 500s link linear infinite;
 }
 
 .header ul li a {
@@ -55,16 +61,109 @@
     text-shadow: 0 0 20px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255);
 }
 
+
+
 .header h1 {
     color: white;
     text-shadow: 0 0 20px rgb(60, 0, 255), 0 0 20px rgb(218, 1, 251);
     display: flex;
-    z-index: 10;
-
+    z-index: -5;
 }
 
-main {
+.title{
+    animation: 5s title linear infinite;
+}
+
+.main {
     padding-top: 100px;
+    height: 850px;
+    animation: 5s main linear infinite;
+    border-radius: 5px;
+    background-color: #edde93;
+    display: block;
+    position: relative;
+}
+
+@keyframes link{
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-625px);
+    }
+    50%{
+        transform: translateX(-1250px);
+    }
+    75%{
+        transform: translateX(-625px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes title{
+    0%{
+        color: transparent;
+        transform: translateX(-1100px);
+        text-shadow: 0 0 20px rgb(60, 0, 255), 0 0 20px rgb(218, 1, 251);
+    }
+    60%{
+        color: white;
+    }
+    70%{
+        color: white;
+        text-shadow: 0 0 20px rgb(60, 0, 255), 0 0 20px rgb(218, 1, 251);
+    }
+    80%{
+        color: transparent;
+        text-shadow: none;
+    }
+    99%{
+        color: transparent;
+        text-shadow: none;
+    }
+    100%{
+        transform: translateX(1100px);
+        text-shadow: 0 0 20px rgb(60, 0, 255), 0 0 20px rgb(218, 1, 251);
+    }
+}
+@keyframes main {
+    0% {
+        background: #e60000;
+        color: white;
+    }
+    14% {
+        background: #f39800;
+        color: #000000;
+    }
+    28% {
+        background: #fff100;
+        color: #000000;
+    }
+    42% {
+        background: #009944;
+        color: white;
+    }
+    56% {
+        background: #0068b7;
+        color: white;
+    }
+    70% {
+        background: #1d2088;
+        color: white;
+    }
+    85% {
+        background: #920783;
+        color: white;
+    }
+    95%{
+        color: white;
+    }
+    100% {
+        background: #e60000;
+        color: white;
+    }
 }
 .notfound {
     font-size: 100px;
@@ -92,14 +191,59 @@ main {
             #e60000
         )
         0 / 200%;
-    animation: 1s header linear infinite;
+    animation: 5s header linear infinite;
     border-radius: 50%;
     box-shadow: -20px 0 3px rgba(0, 0, 0, 0.168) inset;
     z-index: 8;
     margin-top: 10px;
     margin-left: 10px;
+    border-radius: 50px;
+    animation: mochimochi 3s infinite;
+}
+.main::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background-color: #fff;
+    animation: kiran 3.5s ease-in-out infinite;
 }
 
+@keyframes kiran {
+    0% {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+    }
+    81% {
+        transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}
+@keyframes mochimochi {
+    0% {
+        transform: scale(1, 0.8);
+    }
+    20% {
+        transform: scale(0.8, 1.1);
+    }
+    90% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(1, 0.8);
+    }
+}
 .earth:before {
     content: "";
     display: block;
@@ -116,7 +260,6 @@ main {
     transform: rotate(23.4deg);
     animation: rotation 1s linear infinite;
     z-index: 9;
-
 }
 
 @keyframes rotation {
@@ -127,4 +270,16 @@ main {
         background-position: -200% 0;
     }
 }
-
+.loginbox h2{
+    text-align: center;
+}
+.loginbox{
+    height: 650px;
+    width: 500px;
+    margin-left: 35%;
+    margin-top: 40px;
+    background-color: #0068b7;
+    border: solid 2px #000000;
+    z-index: 20;
+    animation: mochimochi 10s infinite;
+}

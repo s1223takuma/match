@@ -1,10 +1,11 @@
-import "../css/style.css"
+// import "../css/style.css";
 const login = () => {
-    return(
-        <main>
-            <h2>ログインページ</h2>
+    return (
+        <main className="main">
+            <div className="loginbox">
+                <h2>ログインページ</h2>
+            </div>
         </main>
-    )
-}
+    );
+};
 export default login;
-
